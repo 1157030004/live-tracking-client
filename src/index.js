@@ -1,16 +1,16 @@
-require('./models/User')
+require("./models/User");
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(authRoutes);
 
 const mongoUri =
-	"mongodb+srv://ariqshd:!sAKURAS0U@menariq.raw5o.mongodb.net/<dbname>?retryWrites=true&w=majority";
+	"mongodb+srv://ariqshd:!sAKURAS0U@menariq.raw5o.mongodb.net/liveTracking?retryWrites=true&w=majority";
 mongoose.connect(mongoUri, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
